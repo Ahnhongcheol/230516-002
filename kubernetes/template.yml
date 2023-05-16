@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: basic-user
+  name: basicUser
   labels:
-    app: basic-user
+    app: basicUser
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: basic-user
+      app: basicUser
   template:
     metadata:
       labels:
-        app: basic-user
+        app: basicUser
     spec:
       containers:
-        - name: basic-user
-          image: username/basic-user:latest
+        - name: basicUser
+          image: username/basicUser:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -45,13 +45,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: basic-user
+  name: basicUser
   labels:
-    app: basic-user
+    app: basicUser
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: basic-user
+    app: basicUser
 

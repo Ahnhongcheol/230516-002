@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: basic-user
+  name: basicUser
   labels:
-    app: basic-user
+    app: basicUser
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: basic-user
+    app: basicUser

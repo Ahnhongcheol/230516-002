@@ -6,7 +6,6 @@ import javax.persistence.*;
 import lombok.Data;
 import org.springframework.context.ApplicationContext;
 import untitled.BasicUserApplication;
-import untitled.domain.DepartmentAdd;
 
 @Entity
 @Table(name = "Department_table")
@@ -18,12 +17,6 @@ public class Department {
     private Long id;
 
     private String name;
-
-    @PostPersist
-    public void onPostPersist() {
-        DepartmentAdd departmentAdd = new DepartmentAdd(this);
-        departmentAdd.publishAfterCommit();
-    }
 
     public static DepartmentRepository repository() {
         DepartmentRepository departmentRepository = applicationContext()

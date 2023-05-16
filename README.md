@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/storming/9d12762f6f6514874fa938aedfe39b7d
+www.msaez.io/#/storming/230516-002
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -20,7 +20,7 @@ cd /bin
 ## Run the backend micro-services
 See the README.md files inside the each microservices directory:
 
-- basic-user
+- basicUser
 
 
 ## Run API Gateway (Spring Gateway)
@@ -30,7 +30,7 @@ mvn spring-boot:run
 ```
 
 ## Test by API
-- basic-user
+- basicUser
 ```
  http :8088/users id="id" uidx="uidx" tenantId="tenantId" useStatus="useStatus" pass="pass" userName="userName" createBy="createBy" createTm="createTm" lastModiBy="lastModiBy" lastModiTm="lastModiTm" departmentId="departmentId" 
  http :8088/departments id="id" name="name" 
